@@ -21,11 +21,30 @@ a:hover
 `<h2>`标签样式
 
 ```
-h2 .title{
-    color: #007722
+h2.title
+{
+    font-size: 15px;
+    font-family: Arial;
+    color: #007722;
+}
+h2.title span
+{
+    color: #666666;
+    font-size: 12px;
 }
 ```
 
+内容区域中的右边区域
+
+```
+.right
+{
+    width: 266px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+```
 所用到的工具：火狐浏览器的下载小图片工具，或者自己切片。
 
 ![ ](http://images.cnblogs.com/cnblogs_com/cliy-10/1270920/o_1.png)
@@ -168,6 +187,8 @@ margin：设置元素的外边距
 
 不是，这样做有着诸多的优点：权重不一样、继承属性、方便查找等。
 
+* 8、使用绝对定位，如果屏幕分辨率变大或者变小，不会对网页的结构有影响。
+
 ## 4、注册区域的制作
 
 ### 4.1、宽度为100%的背景区域
@@ -236,7 +257,7 @@ line-height: 37px;
 内容区域分为左边、中间和右边三块区域，都是用position定位来固定位置。
 
 ### 5.1、左边区域
- 
+
 ```
 .con-left{
     position :absolute;
@@ -245,11 +266,35 @@ line-height: 37px;
 }
 ```
 
+利用浮动float:left将图片排列整齐，然后调整一下margin-top和margin-left，调整到合适的间距。
+
+```
+li{
+  float: left;
+  margin-left: 10px;
+  margin-top: 16px;
+}
+```
+
 ### 5.2、中间区域
+
+使用`<ul><li></li></li></ul>`标签
+
+`<h2>`标签按照正常字体显示：font-weight:normal;
 
 ### 5.3、右边区域
 
+通过观察可以发现内容的右边区域和其他区域的右边部分布局是相似的，所以可以放到公共样式中。
+
+
+
+### 5.4、hack技术
+
+CSS hack技术就是利用各种方法解决浏览器兼容性的问题，用hack技术，就说明代码写的不规范，我们应该从根本上杜绝兼容性的问题，而不是亡羊补牢。
+
 ## 6、广告区域的制作
+
+为什么要用新窗口打开广告页面？`(__)`==>方便用户操作
 
 ## 7、电影区域的制作
 
