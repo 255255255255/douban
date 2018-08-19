@@ -13,6 +13,7 @@ a
 {
     text-decoration: none;
 }
+
 img, input
 {
     border: none;
@@ -39,7 +40,10 @@ li
     height: 30px;
     position: absolute;
     left: 0px;
-    margin-top: 29px;
+    top: 29px;
+}
+#hd-header .header-logo:hover{
+	background-color:#fff;
 }
 #hd-header .header-search
 {
@@ -49,12 +53,9 @@ li
     position: absolute;
     left: 183px;
     top: 31px;
-    padding-left: 7px;
+    padding-left: 10px;
 }
-#hd-header .header-search input[type="text"]
-{
-    color: #e4e4e4;
-}
+
 #hd-header p
 {
     background-image: url(images/logo-fangdajing.png);
@@ -72,14 +73,13 @@ li
     top: 36px;
     width: 463px;
     height: 21px;
-    list-style: none;
 }
 
 /*精灵技术*/
 #hd-header ul li
 {
     float: left;
-    margin-right: 17px;
+    margin-left: 17px;
 }
 #hd-header ul li a
 {
@@ -114,7 +114,7 @@ li
 }
 #hd-header ul li a.header-shijian
 {
-    background: url(images/logo2.png) -362px 0px no-repeat;
+    background: url(images/logo2.png) -359px 0px no-repeat;
 }
 #hd-header ul li a.header-shiji
 {
@@ -182,11 +182,13 @@ li
 {
     right: 250px;
     top: 20px;
+    padding-left: 10px;
 }
 #hd-reg .reg-password
 {
-    right: 88px;
+    right: 78px;
     top: 20px;
+    padding-left: 10px;
 }
 #hd-reg .reg-login
 {
@@ -198,8 +200,8 @@ li
     position: absolute;
     right: 4px;
     top: 20px;
-    text-align: center;
     line-height: 33px;
+    text-align: center;  //文本左右对齐
     border-radius: 2px;
     font-size: 13px;
 }
@@ -214,18 +216,16 @@ li
     top: 62px;
     width: 82px;
     height: 17px;
-    padding-left: 17px;
+    padding-left:17px;
     line-height: 17px;
     color: #000;
-    font-size: 12px;
+    font-size: 12px
 }
-#hd-reg .reg-p .reg-rember
-{
-    position: absolute;
-    left: 0px;
-    top: 2px;
-    display: block;
-    width: 13px;
+#hd-reg .reg-p .reg-rember{
+	position:absolute;
+	left:0px;
+	top: 2px;
+	width: 13px;
     height: 13px;
 }
 #hd-reg .reg-forget
@@ -241,7 +241,8 @@ li
 {
     width: 950px;
     height: 546px;
-    margin: 35px auto 0;
+    margin: 0 auto;
+    margin-top: 35px;
     position: relative;
 }
 #hd-con .con-left
@@ -251,9 +252,6 @@ li
     position: absolute;
     left: 0px;
     top: 0px;
-}
-#hd-con .con-left ul
-{
 }
 #hd-con .con-left ul li
 {
@@ -305,9 +303,10 @@ li
 }
 #hd-con .con-right li
 {
-    margin-top: 17px;
+    /*margin-top: 17px;*/
+    height:70px; /*固定<li>标签的高度，解决不同浏览器之间的兼容性问题*/
 }
-#hd-con .con-right /*必须设置con-right的高度，不然当他的子元素绝对定位时会出错*/
+#hd-con .con-right /*必须设置con-right的高度(父元素)，不然当他的子元素绝对定位时会出错*/
 {
     height: 546px;
 }
@@ -339,7 +338,6 @@ li
     display: block;
     width: 68px;
     height: 28px;
-    overflow: hidden; /*图片超出部分隐藏*/
     position: absolute;
     left: 87px;
     top: 11px;
@@ -379,6 +377,7 @@ li
 }
 #hd-con .con-right .last-ad span
 {
+    display: block;
     color: #999999;
     position: absolute;
     left: 128px;
@@ -390,7 +389,7 @@ li
 {
     height: 631px;
     width: 100%;
-    background-color: #f7f7f7;
+    background-color: #f7f7f7; 
     margin-top: 44px;
     padding-top: 40px;
 }
@@ -876,9 +875,8 @@ b
     right: 305px;
 }
 
-
-
 /*网页底部结束*/
+
 /*公共样式*/
 a
 {
@@ -919,9 +917,13 @@ h2.title span
     width: 950px;
     height: 90px;
 }
+.hd-ad a:hover
+{
+    background-color: #fff;
+}
 .left
 {
-    width: 121px;
+    width: 121px; /*根据不同的区域设置不同的高度*/
     position: absolute;
     left: 0px;
     right: 0px;
@@ -930,8 +932,8 @@ h2.title span
 {
     font-size: 24px;
     color: #2297cc;
-}
-.left a:hover
+} 
+.left .left-title:hover
 {
     color: #fff;
 }
