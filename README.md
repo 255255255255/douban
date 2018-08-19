@@ -45,6 +45,75 @@ h2.title span
     top: 0px;
 }
 ```
+
+广告区域的样式：
+
+```
+.hd-ad
+{
+    width: 950px;
+    height: 90px;
+    margin: 0 auto;
+}
+.hd-ad img
+{
+    width: 950px;
+    height: 90px;
+}
+```
+
+电影区域、读书区域、音乐区域、小组区域、同城区域的左侧区域
+
+```
+.left
+{
+    width: 121px; /*根据不同的区域设置不同的高度*/
+    position: absolute;
+    left: 0px;
+    right: 0px;
+}
+.left .left-title
+{
+    font-size: 24px;
+    color: #2297cc;
+}
+.left .left-title:hover
+{
+    color: #fff;
+}
+.left .left-up
+{
+    margin-top: 10px;
+}
+.left .left-up li
+{
+    font-size: 14px;
+    line-height: 24px;
+}
+.left .left-down
+{
+    margin-top: 28px;
+}
+.left .left-down li
+{
+    width: 70px;
+    height: 93px;
+}
+.left .left-down li a.left-down-pic
+{
+    border-radius: 6px;
+    box-shadow: 3px 3px 3px #999;
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+.left .left-down li a.left-down-des
+{
+    display: block;
+    margin-top: 10px;
+}
+```
+
 所用到的工具：火狐浏览器的下载小图片工具，或者自己切片。
 
 ![ ](http://images.cnblogs.com/cnblogs_com/cliy-10/1270920/o_1.png)
@@ -286,11 +355,21 @@ li{
 
 通过观察可以发现内容的右边区域和其他区域的右边部分布局是相似的，所以可以放到公共样式中(.right)。
 
+```
+#hd-con .con-right li
+{
+    /*margin-top: 17px;*/
+    height:70px; /*固定<li>标签的高度，解决不同浏览器之间的兼容性问题*/
+}
+```
+
+设置为height:70px;代替设置它的margin-top为17px，是为了固定`<li>`标签的高度，解决不同浏览器之间的兼容性问题，
+
 ### 5.4、hack技术
 
 CSS hack技术就是利用各种方法解决浏览器兼容性的问题，用hack技术，就说明代码写的不规范，我们应该从根本上杜绝兼容性的问题，而不是亡羊补牢。
 
-### 5.5、广告区域
+### 5.5、小广告区域
 
 设置广告区域时，必须设置它的父元素con-right的高度，不然当设置它的子元素绝对定位时会达不到预期的效果。
 
@@ -300,7 +379,51 @@ CSS hack技术就是利用各种方法解决浏览器兼容性的问题，用hac
 
 为什么要用新窗口打开广告页面？`(__)`==>方便用户操作
 
+广告区域的制作放在公共样式中。
+
 ## 7、电影区域的制作
+
+大块的区域也可以position定位的方式，但是正确的做法应该使用margin设置大块区域的距离。
+
+```
+#hd-movie-background
+{
+    height: 631px;
+    width: 100%;
+    background-color: #f7f7f7;
+    margin-top: 44px;
+    padding-top: 40px; //内边距设置为40px
+}
+```
+
+因为如果内容区域或者其他区域出现错误不能显示的话，电影区域可以自动顶上去，否则使用定位的话，其他区域出现错误，浏览器将会留出大量的空白区域。(脱离了文档流)
+
+也就是说对于大块区域不能用position定位，需要使用margin外边距来设置一些属性值从而达到效果。
+
+```
+#hd-movie-background #hd-movie{
+margin: 0 auto;
+margin-top: 40px;
+}
+```
+
+
+### 7.1、左边区域
+
+电影区域、读书区域、音乐区域、小组区域、同城区域的左侧区域是类似的，应该放在公共样式中。
+
+利用CSS精灵技术设置不同区域的图片
+
+```
+#hd-movie-background #hd-movie .movie-pic
+{
+    background: url(images/app_icons_50_10.jpg) no-repeat;
+    backfround-position:-350px 0px;
+}
+```
+### 7.2、中间区域
+
+### 7.3、右边区域
 
 ## 8、读书区域的制作
 
