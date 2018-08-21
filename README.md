@@ -114,6 +114,25 @@ h2.title span
 }
 ```
 
+电影区域、读书区域、音乐区域、小组区域、同城区域的中间区
+
+```
+.mid
+{
+    width: 530px;
+    position: absolute;
+    left: 121px;
+    top: 0px;
+}
+
+.mid li
+{
+    width: 127px;
+    text-align: center;
+    float: left;
+}
+```
+
 所用到的工具：火狐浏览器的下载小图片工具，或者自己切片。
 
 ![ ](http://images.cnblogs.com/cnblogs_com/cliy-10/1270920/o_1.png)
@@ -140,14 +159,14 @@ h2.title span
 //清除a标签的下划线
 a
 {
-	text-decoration: none;
+    text-decoration: none;
 }
 //清除默认边框
 img,input
 {
-	border:none;
-	border:1px solid none;
-	//针对IE6，在IE6中即使设置border:none还是会有边线，需要在具体的设置为none
+    border:none;
+    border:1px solid none;
+    //针对IE6，在IE6中即使设置border:none还是会有边线，需要在具体的设置为none
 
 }
 li
@@ -421,7 +440,26 @@ margin-top: 40px;
     backfround-position:-350px 0px;
 }
 ```
+
+设置圆角：border-radius
+设置投影效果：box-shadow
+IE6浏览器并不支持CSS3的属性。
+
 ### 7.2、中间区域
+
+电影区域、读书区域、音乐区域、小组区域、同城区域的中间区域也是类似的，应该放在公共样式中。
+
+文字居中显示：text-align:center;
+
+评分的效果(也就是有几颗星星)，利用精灵技术。
+
+```
+ background: url(images/xingxing.png) no-repeat;
+ background-position:20px 0;
+```
+
+因为`<img>`标签是包在`<a>`标签之中的，`<a>`标签存在默认样式，鼠标放到`<a>`标签，背景颜色就会改变，现在导致鼠标放上去，图片的背景颜色也会改变。
+
 
 ### 7.3、右边区域
 

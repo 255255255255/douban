@@ -333,6 +333,11 @@ li
     left: 19px;
     top: 44px;
 }
+#hd-con .con-right .last-ad .last-ad-pic img.last-ad-pic1:hover
+{
+    display: block;
+    background-color: #fff;
+}
 #hd-con .con-right .last-ad .last-ad-ghost img
 {
     display: block;
@@ -341,10 +346,6 @@ li
     position: absolute;
     left: 87px;
     top: 11px;
-}
-#hd-con .con-right .last-ad .last-ad-ghost img:hover
-{
-    background-color: #fff;
 }
 #hd-con .con-right .last-ad .last-ad-rainbow img
 {
@@ -357,10 +358,6 @@ li
     position: absolute;
     right: 0px;
     top: 0px;
-}
-#hd-con .con-right .last-ad .last-ad-rainbow img:hover
-{
-    background-color: #fff;
 }
 #hd-con .con-right .last-ad .last-ad-beghost
 {
@@ -438,6 +435,7 @@ li
     margin-bottom: 40px;
     overflow: hidden;
 }
+
 #hd-movie-background #hd-movie .move-right-ul
 {
     margin-top: 12px;
@@ -932,7 +930,7 @@ h2.title span
 {
     font-size: 24px;
     color: #2297cc;
-} 
+}
 .left .left-title:hover
 {
     color: #fff;
