@@ -397,6 +397,15 @@ li
     margin: 0px auto;
     position: relative;
 }
+#hd-movie-background #hd-movie .mid ul
+{
+    margin-top: 16px;
+}
+#hd-movie-background #hd-movie ul.hd-movie-list li
+{
+    margin-bottom: 40px;
+    overflow: hidden;
+}
 #hd-movie-background #hd-movie .hd-movie-name
 {
     display: block;
@@ -426,19 +435,12 @@ li
     border-radius: 3px;
     margin: 0 auto;
 }
-#hd-movie-background #hd-movie .mid ul
-{
-    margin-top: 16px;
-}
-#hd-movie-background #hd-movie ul.hd-movie-list li
-{
-    margin-bottom: 40px;
-    overflow: hidden;
-}
 
 #hd-movie-background #hd-movie .move-right-ul
 {
     margin-top: 12px;
+    height: 150px;
+
 }
 #hd-movie-background #hd-movie .move-right-ul li
 {
@@ -448,20 +450,15 @@ li
 }
 #hd-movie-background #hd-movie .movie-title
 {
-    float: left;
     margin-top: 20px;
-    width: 226px; /*将近期热门的长度设置的和class="right"一样宽， 下面的电影名称的float:left才有可能被挤下去*/
-}
-#hd-movie-background #hd-movie .movie-right-down
-{
-    float: left;
+    width: 266px; /*将近期热门的长度设置的和它的父元素的宽度一样宽，下面的电影名称的float:left才有可能被挤下去*/
 }
 #hd-movie-background #hd-movie .movie-right-down li
-{
+{   float: left;
     border-bottom: 1px solid #eaeaea;
     height: 30px;
-    line-height: 35px;
-    width: 264px;
+    line-height: 30px;
+    width: 266px;
 }
 #hd-movie-background #hd-movie .movie-right-down li a
 {
