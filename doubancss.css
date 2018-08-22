@@ -214,7 +214,7 @@ li
     position: absolute;
     left: 544px;
     top: 62px;
-    width: 82px;
+    width: 65px;
     height: 17px;
     padding-left:17px;
     line-height: 17px;
@@ -474,7 +474,8 @@ li
 {
     width: 950px;
     height: 623px;
-    margin: 38px auto 0px;
+    margin: 0 auto;
+    margin-top: 38px;
     position: relative;
 }
 #hd-book a
@@ -485,15 +486,11 @@ li
 {
     color: #fff;
 }
-#hd-book .hd-book-new
-{
-    position: relative;
-}
 #hd-book .hd-book-new img
 {
     position: absolute;
     left: 28px;
-    top: 3px;
+    top: 69px;
 }
 #hd-book .book-read
 {
@@ -517,8 +514,8 @@ li
     width: 68px;
     height: 23px;
     background-color: #999a95;
-    text-align: center;
     line-height: 23px;
+    text-align: center;
     color: #fff;
     margin: 0 auto;
     border-radius: 2px;

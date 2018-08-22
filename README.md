@@ -495,6 +495,7 @@ IE6浏览器并不支持CSS3的属性。
 }
 ```
 
+![ ](http://images.cnblogs.com/cnblogs_com/cliy-10/1270920/o_5.png)
 每个`<li>`标签都有一个下边框
 
 ```
@@ -505,7 +506,59 @@ border-bottom: 1px solid #eaeaea;
 
 ### 8.1、读书区域左边区域
 
+左侧区域和电影区域的左侧类似
+
+但是色调整体与电影区域的色调不同
+
+通过观察可以发现，读书区域的整体色调是相同的，所以在读书区域可以设置成通用样式。
+
+```
+#hd-book a
+{
+    color: #614e3c;
+}
+#hd-book a:hover
+{
+    color: #fff;
+}
+```
+
+公共区域就直接复制粘贴，然后稍作修改即可。
+
+new小图片的制作：
+
+```
+#hd-book .hd-book-new img
+{
+    position: absolute;
+    left: 28px;
+    top: 69px;
+}
+```
+
+精灵图片的制作
+
+```
+#hd-book .book-read
+{
+    background: url(images/app_icons_50_10.jpg) no-repeat;
+    background-position: 0px 0px;
+}
+#hd-book .book-write
+{
+    background: url(images/app_icons_50_10.jpg) no-repeat;
+     background-position: -399px 0px;
+}
+#hd-book .book-goshoping
+{
+    background :url(images/app_icons_50_10.jpg) -200px 0 no-repeat;
+     background-position: -200px 0px;
+}
+```
+
 ### 8.2、读书区域中间区域
+
+合理使用公共样式，不同的地方单独修改即可。
 
 ### 8.3、读书区域右边区域
 
