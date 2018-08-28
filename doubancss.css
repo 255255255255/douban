@@ -454,7 +454,7 @@ li
     width: 266px; /*将近期热门的长度设置的和它的父元素的宽度一样宽，下面的电影名称的float:left才有可能被挤下去*/
 }
 #hd-movie-background #hd-movie .movie-right-down li
-{   float: left;
+{
     border-bottom: 1px solid #eaeaea;
     height: 30px;
     line-height: 30px;
@@ -524,17 +524,20 @@ li
 {
     background-color: #878882;
 }
-#hd-book .mid p
+/**书的价格*/
+#hd-book .mid b
 {
-    margin-top: 5px;
+    font-size: 12px;
+    color: #666666;
+    font-weight: 400;
+    display: block;
 }
 #hd-book .mid .book-num
 {
     display: block;
-    float: left;
-    margin-top: 32px;
-    width: 530px;
-    margin-bottom: 10px;
+    position: relative;
+    margin-top: 250px;
+    margin-left: 0px;
 }
 #hd-book .right li
 {
@@ -544,25 +547,14 @@ li
 }
 #hd-book .right li span
 {
-    float: left;
-    margin-right: 11px;
+    margin-right: 6px;
     color: #999999;
 }
 #hd-book .right li a
 {
-    float: left;
-    margin-right: 11px;
+    margin-right: 6px;
     line-height: 25px;
 }
-/*书的价格*/
-b
-{
-    font-size: 12px;
-    color: #666666;
-    font-weight: 400;
-    display: block;
-}
-
 /*读书区域结束*/
 /*音乐区域*/
 #hd-music-background
