@@ -397,9 +397,15 @@ CSS hack技术就是利用各种方法解决浏览器兼容性的问题，用hac
 
 ## 6、广告区域的制作
 
-为什么要用新窗口打开广告页面？`(__)`==>方便用户操作
+需要用新窗口打开广告页面？`("_blank")`
 
-广告区域的制作放在公共样式中。
+```
+    <div class="hd-ad">
+        <a href="" target="_blank" class="">
+            <img src="images/guanggao.JPG" alt="" /></a></div>
+```
+
+广告区域的制作放在公共样式中
 
 ## 7、电影区域的制作
 
@@ -554,8 +560,8 @@ new小图片的制作：
 }
 #hd-book .book-goshoping
 {
-    background :url(images/app_icons_50_10.jpg) -200px 0 no-repeat;
-     background-position: -200px 0px;
+    background :url(images/app_icons_50_10.jpg) no-repeat;
+    background-position: -200px 0px;
 }
 ```
 
@@ -577,12 +583,46 @@ border-bottom: 1px solid #eaeaea;
 
 元素的内边距(padding)和外边距(margin)的区别
 
-
 ## 9、音乐区域的制作
+
+音乐区域的背景色
+
+### 9.1、音乐区域左边区域
+
+图片精灵的制作
+
+```
+#hd-music .douban-FM
+{
+    background: url(images/app_icons_50_10.jpg) -250px 0 no-repeat;
+}
+#hd-music .douban-music
+{
+    background: url(images/app_icons_50_10.jpg) -50px 0 no-repeat;
+}
+```
+
+音乐区域字体的颜色
+
+### 9.2、音乐区域中间区域
+
+### 9.3、音乐区域右边区域
 
 ## 10、小组区域的制作
 
+### 10.1、小组区域左边区域
+
+### 10.2、小组区域中间区域
+
+### 10.3、小组区域右边区域
+
 ## 11、同城区域的制作
+
+### 11.1、同城区域左边区域
+
+### 11.2、同城区域中间区域
+
+### 11.3、同城区域右边区域
 
 ## 12、网页底部的制作
 

@@ -587,14 +587,6 @@ li
 {
     background: url(images/app_icons_50_10.jpg) -50px 0 no-repeat;
 }
-#hd-music-background #hd-music .music-title
-{
-    color: #f38c6b;
-}
-#hd-music-background #hd-music .music-title:hover
-{
-    color: #fff;
-}
 #hd-music-background #hd-music .mid li
 {
     margin-top: 18px;
@@ -605,12 +597,11 @@ li
     width: 67px;
     display: block;
     height: 9px;
-    background: url(images/xingxing.png) 20px 0 no-repeat;
+    background: url(images/xingxing.png) 20px -1px no-repeat;
     color: #fd4400;
     line-height: 9px;
     padding-left: 60px; /*原来的width是127，现在减去60,为67*/
     font-weight: 400;
-    padding-top: 2px;
 }
 #hd-music-background #hd-music .right .music-right-ul li
 {
